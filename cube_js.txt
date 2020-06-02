@@ -12,8 +12,21 @@ var xAxis = 0;
 var yAxis = 1;
 var zAxis = 2;
 
+
+var x = 0;
+
+
+var flag = true;
+
+
+
 var axis = 0;
+//var theta = [ 30, -40, -20 ]; //wrb
+//var theta = [ 150, -40, 200 ]; //wbo
+//var theta = [ 150, 40, 160 ]; //wog
+//var theta = [ 30, 40, 20 ]; //wgr
 var theta = [ 0, 0, 0 ];
+
 
 var thetaLoc;
 
@@ -59,6 +72,8 @@ window.onload = function init()
 
     //event listeners for buttons
 
+
+/*
     document.getElementById( "xButton" ).onclick = function () {
         axis = xAxis;
     };
@@ -68,6 +83,34 @@ window.onload = function init()
     document.getElementById( "zButton" ).onclick = function () {
         axis = zAxis;
     };
+*/
+    document.getElementById( "xButton" ).onclick = function () {
+        axis = xAxis;
+for(x=0; x<10; x++) {
+if(flag) theta[axis] += 1.0;
+}
+    };
+    document.getElementById( "yButton" ).onclick = function () {
+        axis = yAxis;
+for(x=0; x<10; x++) {
+if(flag) theta[axis] += 1.0;
+}
+    };
+    document.getElementById( "zButton" ).onclick = function () {
+        axis = zAxis;
+for(x=0; x<10; x++) {
+if(flag) theta[axis] += 1.0;
+}
+    };
+
+
+
+    document.getElementById( "sButton" ).onclick = function () {
+        flag = !flag;
+    };
+
+
+
 
     render();
 }
@@ -405,6 +448,10 @@ function quad(a, b, c, d, e)
 //yellow
     ];
 
+
+
+
+
     var vertexColors = [
         [ 1.0, 0.0, 0.0, 1.0 ],  // red
         [ 0.0, 0.0, 1.0, 1.0 ],  // blue
@@ -442,7 +489,14 @@ function render()
 {
     gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-    theta[axis] += 2.0;
+
+/*
+for(x=0; x<=90; x++) {
+if(flag) theta[axis] += 1.0;
+}
+*/
+//    theta[axis] += 1.0;
+//    theta[axis] += 2.0;
 //    theta[axis] += 0.0;
     gl.uniform3fv(thetaLoc, theta);
 

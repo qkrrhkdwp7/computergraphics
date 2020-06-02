@@ -70,5 +70,9 @@ Oops ... your browser doesn't support the HTML5 canvas element
 <button id= "yButton">Rotate Y</button>
 <button id= "zButton">Rotate Z</button>
 
+
+<button id= "sButton">STOP</button>
+
+
 </body>
 </html>
