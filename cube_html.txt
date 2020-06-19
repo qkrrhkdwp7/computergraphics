@@ -66,12 +66,24 @@ Oops ... your browser doesn't support the HTML5 canvas element
 
 <br/>
 
-<button id= "xButton">Rotate X</button>
-<button id= "yButton">Rotate Y</button>
-<button id= "zButton">Rotate Z</button>
+<button id= "xButton">Side</button>
+<button id= "yButton">Flip</button>
+
+<button id= "aButton">W</button>
+<button id= "bButton">w</button>
+<button id= "cButton">R</button>
+<button id= "dButton">r</button>
+<button id= "eButton">B</button>
+<button id= "fButton">b</button>
+<button id= "gButton">O</button>
+<button id= "hButton">o</button>
+<button id= "iButton">G</button>
+<button id= "jButton">g</button>
+<button id= "kButton">Y</button>
+<button id= "lButton">y</button>
 
 
-<button id= "sButton">STOP</button>
+<button id= "mButton">Shuffle</button>
 
 
 </body>
